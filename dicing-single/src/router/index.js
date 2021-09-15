@@ -3,9 +3,11 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
+  base: '/',
   routes: [
     {
-      path: '/boCake/index',
+      path: '/index',
       name: 'BoCake',
       component: () => import('@/views/Index'),
       meta: {

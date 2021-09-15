@@ -145,7 +145,7 @@ export default {
     return {
       defaultImg: 'this.src="' + require('@/assets/img/boCake/agentAvatar_small.png') + '"',
       url: {
-        wsUri: this.GLOBAL.getReqBaseUrl('dicing_ws') + '/ws',
+        wsUri: 'ws://dicing.xms.4846.com/ws',
         init: '/init', // 数据初始化
         desks: '/desks' // 获取其他桌号
       },

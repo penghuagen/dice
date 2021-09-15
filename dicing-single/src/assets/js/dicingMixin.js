@@ -32,7 +32,6 @@ export default {
       let success = boCakeWebsocket.websocketSend('BARRAGE_R', this.baberText)
       if (success) {
         this.baberText = ''
-        // this.repliesShow = false
       } else {
         this.alert('不好意思，刚才服务器在忙，发送失败了^^')
       }

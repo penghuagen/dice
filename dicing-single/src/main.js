@@ -1,14 +1,7 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-/* import Vue from 'vue' */
-// 通用main
 import Vue from 'vue'
 import App from './App'
 import router from '@/router/index'
 
-/*
- 所有项目公用
-*/
 // 引入vant样式
 import 'vant/lib/index.css'
 // 全局样式
@@ -19,9 +12,6 @@ import 'lib-flexible/flexible'
 import http from '@/assets/js/axios'
 // 全局方法
 import common from '@/assets/js/common'
-// 全局变量
-import Global from '@/assets/js/global'
-import myPub from '@/assets/js/mypub'
 import { vueBaberrage } from 'vue-baberrage'
 
 // vant按需引入
@@ -80,13 +70,10 @@ import {
   Uploader
 } from 'vant'
 Vue.use(vueBaberrage)
-Vue.prototype.GLOBAL = Global
-Vue.prototype.$mypub = myPub
 Vue.prototype.$http = http
 
 Vue.config.productionTip = false
 Vue.use(common)
-Vue.prototype.GLOBAL = Global
 
 Vue.use(AddressEdit)
   .use(ActionSheet)
