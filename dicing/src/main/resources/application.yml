@@ -1,0 +1,46 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
+  tomcat:
+    uri-encoding: utf-8
+#mybatis的相关配置
+mybatis:
+  #mapper配置文件
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.haojing.dicing.entity
+  #开启驼峰命名
+  configuration:
+    map-underscore-to-camel-case: true
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+spring:
+  jackson:
+    date-format: yyyyMMddHHmmssSSS
+    time-zone: GMT+8
+  datasource:
+    url: jdbc:mysql://47.114.141.192:3306/dicing?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: xms_xm2009
+    driver-class-name: com.mysql.jdbc.Driver
+#    hikari:
+#      maximum-pool-size: 10
+#      pool-name: HikariCP
+#      connection-test-query: select 1
+#      minimum-idle: 3
+
+dicing:
+  startTime: 2021-09-15 16:40:00
+  druid:
+    initialSize: 3
+    minIdle: 3
+    maxActive: 10
+    slowSqlMillis: 1000
+    logSlowSql: true
+    testWhileIdle: true
+    validationQuery: select 1
+
+

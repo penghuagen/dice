@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.haojing.dicing.dao.UserMapper">
+    <select id="findByDeskNo" resultType="User">
+        SELECT * FROM user where deskNo=#{deskNo} order by seqNo
+    </select>
+    <select id="findByDeskNoAndSeqNo" resultType="User">
+        SELECT * FROM user where deskNo=#{deskNo} and seqNo=${seqNo}
+    </select>
+    <select id="find" resultType="User">
+        SELECT * FROM user where userId=#{userId}
+    </select>
+    <select id="countByDeskNo" resultType="int">
+        select count(*) from user where deskNo=#{deskNo}
+    </select>
+    <update id="updateReady">
+        UPDATE user set ready=#{ready} where userId=#{userId}
+    </update>
+    <select id="findAll" resultType="User">
+        SELECT * FROM user
+    </select>
+    <update id="updateAvator">
+        update user set avator=#{avator} where userId=#{userId}
+    </update>
+</mapper>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.haojing.dicing.dao.DicingLogMapper">
+
+    <resultMap id="dicingLogResult" type="DicingLog">
+        <id property="dicingLogId" column="dicingLogId" />
+        <result property="awardId" column="awardId" />
+        <result property="userId" column="userId" />
+        <result property="roundNo" column="roundNo" />
+        <result property="dicingTime" column="dicingTime" />
+        <result property="valid" column="valid" />
+        <result property="dices" column="dices" typeHandler="com.haojing.dicing.dao.IntArrayTypeHandler"/>
+        <result property="dicesOut" column="dicesOut" typeHandler="com.haojing.dicing.dao.IntArrayCommaTypeHandler"/>
+        <result property="deskNo" column="deskNo" />
+        <result property="score" column="score"/>
+        <result property="voiceIndex" column="voiceIndex"/>
+        <result property="systemDicing" column="systemDicing"/>
+    </resultMap>
+    <select id="findAwardByUserId" resultMap="dicingLogResult">
+        SELECT * FROM dicingLog where userId=#{userId} and awardId > 1 and valid=1
+    </select>
+    <select id="findZYByDeskNo" resultMap="dicingLogResult">
+        SELECT * FROM dicingLog where deskNo=#{deskNo} and awardId >= 7 and valid=1 order by awardId desc, score desc, dicingTime asc
+    </select>
+    <select id="findValidByDeskNo" resultMap="dicingLogResult">
+        SELECT * FROM dicingLog where deskNo=#{deskNo} and awardId > 1 and valid=1  order by awardId desc, score desc, dicingTime asc
+    </select>
+    <insert id="add">
+        insert into dicingLog(awardId,userId,roundNo,dicingTime,valid,dices,deskNo,score,dicesOut,voiceIndex,systemDicing)
+        values(#{awardId},#{userId},#{roundNo}
+        ,#{dicingTime},#{valid},#{dices, typeHandler=com.haojing.dicing.dao.IntArrayTypeHandler},#{deskNo},#{score}
+        ,#{dicesOut, typeHandler=com.haojing.dicing.dao.IntArrayCommaTypeHandler},#{voiceIndex},#{systemDicing})
+    </insert>
+    <update id="invalidZYByUserIdAndDeskNo">
+        UPDATE dicingLog set valid=0 where deskNo=#{deskNo} and userId=#{userId} and awardId >= 7
+    </update>
+    <select id="getDicingLogs" resultMap="dicingLogResult">
+        SELECT * FROM dicingLog where deskNo=#{deskNo}
+        <if test="startDicingLogId != null">
+            and dicingLogId <![CDATA[<]]> #{startDicingLogId}
+        </if>
+        order by dicingTime desc limit #{pageSize}
+    </select>
+
+    <delete id="removeByDeskNo">
+        delete from dicingLog where deskNo = #{deskNo}
+    </delete>
+
+</mapper>

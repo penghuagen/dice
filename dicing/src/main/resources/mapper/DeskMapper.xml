@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.haojing.dicing.dao.DeskMapper">
+    <select id="findByDeskNo" resultType="Desk">
+        SELECT * FROM desk where deskNo=#{deskNo}
+    </select>
+    <select id="findAll" resultType="Desk">
+        SELECT * FROM desk order by deskNo
+    </select>
+    <update id="update" >
+        UPDATE desk set state = #{state}, roundNo=#{roundNo}, curSeqNo=#{curSeqNo}, noRemainingRoundNo=#{noRemainingRoundNo}
+         where deskNo=#{deskNo}
+    </update>
+    <update id="resetDesk" >
+        UPDATE desk set state = 0, roundNo=1, curSeqNo=0, noRemainingRoundNo=-1, startTime=#{startTime}
+        where deskNo=#{deskNo}
+    </update>
+    <update id="startAllDesks" >
+        UPDATE desk set state = 1, curSeqNo = 1, roundNo = 1, noRemainingRoundNo=-1 where state = 0
+    </update>
+</mapper>

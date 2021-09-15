@@ -1,0 +1,20 @@
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+rebel.xml
+# Mac
+.DS_Store
+
+# idea
+.idea
+*.iml
+
+# eclipse
+.classpath
+.project
+.settings
+
+# other
+/target
+/bin

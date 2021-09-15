@@ -1,0 +1,301 @@
+//覆盖vant
+/deep/ .van-picker__cancel, /deep/ .van-picker__confirm{
+  color:#E4413D;
+}
+
+.van-popup--center{
+  background-color: transparent;
+  width: 100%;
+}
+
+.boCake-wrap{
+  background-image: url(~@/assets/img/boCake/bj.png);
+  background-repeat: repeat;
+  position: relative;
+
+  .boCake-middle-main{
+    //position: relative;
+    overflow-x: hidden;
+  }
+
+  .boCake-header{
+    display: block;
+    background-image: url(~@/assets/img/boCake/boCake-header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 580px;
+    text-align: center;
+    position: relative;
+    z-index: 99;
+    .boCake-rule{
+      position: absolute;
+      right: 0px;
+      top:10px;
+      z-index: 98;
+      background-color: #8A1210;
+      color: #CF9598;
+      font-size: 11px;
+      padding:4px 12px;
+      border-radius: 15px 0px 0px 15px;
+      //line-height: 1;
+    }
+
+    /*桌号及轮次*/
+    .boCake-table{
+      position: absolute;
+      left: 5%;
+      top:0px;
+      display: block;
+      width: 29px;
+      height: 127px;
+      padding-top: 4px;
+      background-size: 100% 100%;
+      background-image: url(~@/assets/img/boCake/roundNo.png);
+
+      text-align: left;
+      .boCake-table-font{
+        font-size: 10px;
+        width: 20px;
+        padding:26px 0 0 8px;
+        color: #D0878B;
+        text-align: center;
+        .number{
+          color: #fff;
+        }
+      }
+    }
+    .boCake-font{
+      margin-top: 40px;
+    }
+
+    .boCake-button-wrap{
+      position: relative;
+      z-index: 99;
+      margin-top: -35px;
+      .boCake-button{
+        text-align: center;
+        height: 57px;
+        width: 80%;
+        max-width: 360px;
+        line-height: 48px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #A3191CFF;
+        margin: 0px auto;
+        background-image: url(~@/assets/img/boCake/btn1.png);
+        background-size: 100% 100%;
+      }
+
+      .disabeld{
+        background-image: url(~@/assets/img/boCake/btn2.png);
+        color:#888;
+      }
+
+      .rabbit{
+        position: absolute;
+        z-index: 999;
+        top:26px;
+        left: 5%;
+        width: 55px;
+        height: 43px;
+        background-image: url(~@/assets/img/boCake/rabbit.png);
+        background-size: 100% 100%;
+      }
+
+      .logo{
+        position: absolute;
+        z-index: 999;
+        bottom:-26px;
+        right: 0%;
+        width: 108px;
+        height: 138px;
+        background-image: url(~@/assets/img/boCake/logo.png);
+        background-size: 100% 100%;
+      }
+    }
+
+    .boCake-time{
+      text-align: center;
+      margin-top: -8px;
+      color: #FFACAB;
+    }
+  }
+
+  //内容区域
+  .boCake-main{
+    padding: 0px 15px 15px;
+    color: #333;
+    position: relative;
+    z-index: 999;
+    //当前博饼信息
+    .boCake-current-wrap{
+      display: flex;
+      align-items: center;
+      color:#F4C9A4;
+      .person{
+        text-align: left;
+        width: 30%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        flex-grow: 1;
+        span{
+          color:#fff;
+        }
+      }
+
+      .table-detail{
+        flex-grow: 0;
+        border:1px solid #c86665;
+        color: #c86665;
+        width: 80px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 30px;
+        text-align: center;
+      }
+    }
+
+    .boCake-detail-wrap{
+      margin-top: 20px;
+      .boCake-tab{
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+        text-align: center;
+        color: #A41614;
+        font-weight: 500;
+        height: 36px;
+        line-height: 36px;
+        .boCake-tab-item{
+          background-color: #903938;
+          border-radius: 3px 3px 0px 0px;
+          width: 100%;
+          color: #FFF;
+        }
+
+        .boCake-tab-center{
+          margin:0 15px;
+        }
+
+        .boCake-tab-item-active{
+          color: #AF001F;
+          background-image: url(~@/assets/img/boCake/bj2.png);
+          background-repeat: repeat;
+        }
+      }
+    }
+  }
+}
+
+.baber-bottom-wrap{
+  position: relative;
+  z-index: 9;
+}
+
+.boCake-avator-wrap{
+  display: flex;
+  align-items: center;
+  margin:30px 0 20px 0;
+  .boCake-avator-item {
+     margin-right: 6px;
+    .avatar{
+      border:2px solid #580100;
+      width: 24px;
+      height: 24px;
+      border-radius: 24px;
+    }
+  }
+
+  .boCake-avator-active{
+    position: relative;
+    .avatar{
+      width: 32px;
+      height: 32px;
+      border-radius: 32px;
+      border:2px solid #e04e63;
+    }
+    i{
+      position: absolute;
+      left:11px;
+      top:-12px;
+      display: block;
+      width: 10px;
+      height: 10px;
+      background-image: url(~@/assets/img/boCake/current.gif);
+      background-repeat: repeat;
+      background-size: 100% 100%;
+      z-index: 999;
+    }
+  }
+}
+
+.welcome-wrap{
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.baber-wrap{
+  display: flex;
+  padding:8px 15px;
+  background-color: #fff;
+  .baber-input-wrap{
+    width: 100%;
+    height: 36px;
+    border-radius: 36px;
+    overflow-y: hidden;
+    .baber-input{
+      width: 100%;
+      height: 36px;
+      border: none;
+      font-size: 15px;
+      padding:0px 4px 0 15px;
+      background-color: #EFEFEF;
+    }
+  }
+  .replies-icon{
+    flex-shrink: 0;
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-image: url(~@/assets/img/boCake/quickly.png);
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    z-index: 999;
+    margin-left:8px;
+  }
+  .baber-button{
+    color:#44C85A;
+    font-size: 18px;
+    height: 36px;
+    width: 45px;
+    line-height: 36px;
+    text-align: center;
+    flex-shrink: 0;
+    margin-left: 8px;
+  }
+}
+
+.replies-wrap{
+  background-color: #fff;
+  padding:5px 15px 15px;
+  .replies-title{
+    font-size: 15px;
+    color:#666;
+    display: flex;
+    justify-content: space-between;
+  }
+.replies-text-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  height: 220px;
+  overflow: auto;
+  .text{
+    margin:12px 12px 0px 0px;
+    padding:8px 12px;
+    background-color: #EFEFEF;
+    color: #666;
+    border-radius:32px;
+  }
+}
+}

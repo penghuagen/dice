@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.haojing.dicing.dao.DeskAwardMapper">
+    <select id="findByDeskNo" resultType="DeskAward">
+        SELECT * FROM deskAward where deskNo=#{deskNo}
+    </select>
+    <update id="updateRemaining">
+        UPDATE deskAward set remaining=#{remaining} where deskAwardId=#{deskAwardId}
+    </update>
+    <delete id="removeByDeskNo">
+        DELETE FROM deskAward where deskNo=#{deskNo}
+    </delete>
+    <insert id="init" >
+        insert into deskAward(deskNo,awardId,counter,remaining) values(#{deskNo},2,2,2),(#{deskNo},3,2,2),(#{deskNo},4,1,1),(#{deskNo},5,1,1),(#{deskNo},6,1,1),(#{deskNo},7,1,1);
+    </insert>
+</mapper>
