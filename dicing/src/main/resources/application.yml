@@ -22,9 +22,9 @@ spring:
     date-format: yyyyMMddHHmmssSSS
     time-zone: GMT+8
   datasource:
-    url: jdbc:mysql://47.114.141.192:3306/dicing?useUnicode=true&characterEncoding=utf-8
-    username: root
-    password: xms_xm2009
+    url: yourUrl
+    username: username
+    password: password
     driver-class-name: com.mysql.jdbc.Driver
 #    hikari:
 #      maximum-pool-size: 10

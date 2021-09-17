@@ -131,7 +131,7 @@ export default {
         this.list = []
         this.config.finishedText = ''
       } else {
-        this.config.finishedText = this.GLOBAL.comvar.nomoreGB
+        this.config.finishedText = '没有更多数据'
       }
 
       this.list = this.list.concat(data)

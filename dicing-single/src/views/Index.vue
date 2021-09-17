@@ -334,9 +334,7 @@ export default {
       if (this.deskColumns && this.deskColumns.length > 0) {
         this.showDeskPopup = true
       } else {
-        this.$http.post(this.url.desks, {
-          apiHostKey: 'dicing_url'
-        }).then(({data}) => {
+        this.$http.post(this.url.desks, {}).then(({data}) => {
           if (data) {
             this.deskColumns = []
             data.forEach(item => {
