@@ -1,30 +1,21 @@
-# dicing-single
+## 博饼简介
+博饼（跋饼），起源于福建泉州府同安县（今福建厦门地区)，由郑成功发明博饼，是闽南地区特有的由饼文化外延的一种传统民俗活动。
+博饼是中秋节时的一种大众娱乐活动，用六粒骰子投掷结果组合来决定参与者的奖品。传统的奖品为大小不同的月饼，共计一会，
+设状元1个，对堂2个，三红4个，四进8个，二举16个，一秀32个；
 
-> A Vue.js project
+## 项目背影
+博饼活动原本都是线下举办，公司中秋聚餐，将员工分成桌，一般都是8人或10人一桌，设置奖项为状元1个，对堂2个，三红4个，
+四进8个，二举16个，一秀32个，再由每一桌的状元，一起博出王中王。由于疫情关系，公司响声国家政策，不能举行聚餐，
+但又不想因此错过一年一度的博饼，故开发此程序(该程序适合公司内组织博饼活动)。
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 项目介绍
+该项目根据博饼规则开发，包含一些其他趣味性功能，主要包括：
+1、正常博饼功能，支持试博、正式博
+2、支持自动博，主要是防止等待同桌博饼时间太久(网络不好或不在线)，体验不好，自动博分两种：
+    a:用户在博饼页面(如果用户不即时博，程序会在10s内自动博)；
+    b:用户没有进入博饼页面(即用户不在线时(网络不好)、程序会自动代博(时间间隔是20s))
+3、支持实时推送同桌博饼结果、有很强的互动性
+4、支持博饼结果趣味性播报，增加娱乐性
+5、支持弹幕功能，弹幕分手动发送与自动发送。手动发送指用户发送的，自动发送是指博饼结果中对堂或状元，全公司可见
+6、支持博饼甩出效果、模拟真实博饼，甩出时不管博到什么结果无效，不支持下一轮轮空惩罚
+7、支持查看同桌人员、全桌博饼日志、他桌博饼成绩
