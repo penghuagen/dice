@@ -1,5 +1,5 @@
 // 博饼
-import boCakeWebsocket from '@/assets/js/boCakeWebsocket'
+import boCakeWebsocket from '@/assets/js/websocket'
 export default {
   data () {
     return {

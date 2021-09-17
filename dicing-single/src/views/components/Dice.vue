@@ -21,14 +21,14 @@
 </div>
 </template>
 <script>
-import diceMixin from '@/assets/js/diceMixin'
+import diceVoiceMixin from '@/assets/js/diceVoiceMixin'
 export default {
-  mixins: [diceMixin],
+  mixins: [diceVoiceMixin],
   name: 'Dice',
   data () {
     return {
       index: 1,
-      noAwardVoice: false,
+      noAwardVoice: false, // 没有奖品
       xmsAudio: null
     }
   },

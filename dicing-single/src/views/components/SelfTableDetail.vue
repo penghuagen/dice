@@ -121,8 +121,7 @@ export default {
         pageSize: this.config.pageSize,
         startDicingLogId: this.startDicingLogId,
         pageNo: this.config.pageIndex,
-        deskNo: this.deskNo,
-        apiHostKey: 'dicing_url'
+        deskNo: this.deskNo
       }).then(({data}) => {
         this.dataResultData(data)
       })

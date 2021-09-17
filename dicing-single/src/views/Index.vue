@@ -128,7 +128,7 @@
 </template>
 
 <script>
-import boCakeWebsocket from '@/assets/js/boCakeWebsocket'
+import websocket from '@/assets/js/websocket'
 import dicingMixin from '@/assets/js/dicingMixin'
 import Dice from './components/Dice'
 import MyAwards from './components/MyAwards'
@@ -145,12 +145,12 @@ export default {
     return {
       defaultImg: 'this.src="' + require('@/assets/img/boCake/agentAvatar_small.png') + '"',
       url: {
-        wsUri: 'ws://dicing.xms.4846.com/ws',
+        wsUri: 'ws://local.4846.com:8080/ws',
         init: '/init', // 数据初始化
         desks: '/desks' // 获取其他桌号
       },
       tabIndex: 1, // 切换索引值
-      welcome: false,
+      welcome: false, // 欢迎
       pageInit: false, // 界面初始化
       hasAward: false, // 当前博饼是否有奖
       countDownSec: 0, // 0:已开始,大于0未开始
@@ -260,7 +260,7 @@ export default {
         return this.dicingStateMap.FINISHED
       }
     },
-    dicingFont () {
+    dicingFont () { // 博饼按钮
       if (this.dicingState === this.dicingStateMap.TRY ||
           this.dicingState === this.dicingStateMap.TRYDOING) {
         return '试博一把'
@@ -278,7 +278,7 @@ export default {
         return `博一把(${this.diceDelayTime})`
       }
     },
-    startTimeFont () {
+    startTimeFont () { // 开始博饼时间
       let startFont = '-'
       if (this.desk && this.desk.startTime) {
         let startTime = this.desk.startTime
@@ -291,8 +291,6 @@ export default {
   methods: {
     init () {
       this.$http.post(this.url.init, {
-        showLoading: 1,
-        apiHostKey: 'dicing_url'
       }).then(({status, data}) => {
         this.initData(data)
       })
@@ -464,7 +462,7 @@ export default {
         }
         this.dicSocketIng = true
         let contentSocket = '{\\"systemDicing\\":' + systemDicing + '}'
-        let success = boCakeWebsocket.websocketSend('DICING', contentSocket)
+        let success = websocket.websocketSend('DICING', contentSocket)
         if (!success) {
           this.dicSocketIng = false
           this.alert('正在连接中...')
@@ -572,7 +570,7 @@ export default {
     closeWelcome () {
       this.welcome = false
       this.$refs.diceRef.playVoice(0)
-      boCakeWebsocket.createSocket(this.url.wsUri, (data) => {
+      websocket.createSocket(this.url.wsUri, (data) => {
         this.handlerOnMessage(data)
       })
     },

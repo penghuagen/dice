@@ -4,9 +4,8 @@
 
 //通用
 body,pre{
-    font-family:Helvetica;
+  font-family:Helvetica;
 }
-input, textarea, select, button, meter, progress {-webkit-writing-mode:"Helvetica";}
 a,input,button{-webkit-tap-highlight-color:rgba(0,0,0,0)}
 button{-webkit-appearance:none;border-radius:0}
 fieldset,img{border:0 none}
@@ -18,213 +17,80 @@ form{margin:0;}
 textarea{display:block;}
 *:not(input,textarea){ -webkit-touch-callout:none; -webkit-user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;touch-callout:none;}
 a, input, textarea, select, button {
-    outline: 0;
+  outline: 0;
 }
 p,h1,h2,h3,h4,h5{
-    margin:0
+  margin:0
 }
 pre{
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
-    word-wrap: break-word;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
 }
 * {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-touch-callout: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
 }
 html{
-    height:100%
+  height:100%
 }
 body{
-    .maxWidth;
-    height:100%;
-    margin: 0 auto;
-    color:@fontColor
-}
-.main-bg{
-    background:@mainColor
-}
-.active-common{
-    background:@mainColor;
-    color:#fff
-}
-.font-grey{
-    color:@fontGrey
+  .maxWidth;
+  height:100%;
+  margin: 0 auto;
+  color:@fontColor
 }
 .maxWidth{
-    min-width: @minWidth;
-    max-width: @maxWidth;
+  min-width: @minWidth;
+  max-width: @maxWidth;
 }
 .fixed-mode{
-    min-width: @minWidth;
-    max-width: @maxWidth;
-    position:fixed;
-    left:auto;
-    width:100%;
+  min-width: @minWidth;
+  max-width: @maxWidth;
+  position:fixed;
+  left:auto;
+  width:100%;
 }
 .flex{
-    display: -moz-box;  /* Firefox */
-    display: -ms-flexbox;    /* IE10 */
-    display: -webkit-box;    /* Safari */
-    display: -webkit-flex;    /* Chrome, WebKit */
-    display: flexbox;
-    display: flex;
+  display: -moz-box;  /* Firefox */
+  display: -ms-flexbox;    /* IE10 */
+  display: -webkit-box;    /* Safari */
+  display: -webkit-flex;    /* Chrome, WebKit */
+  display: flex;
 }
 .app-wrap{
-    height: 100%;
-    font-size:12px;
-}
-.bg-grey{
-    min-height:100%;
-    overflow:auto;
-    background:@bggrey;
-}
-.bgfff{
-    background:#fff
-}
-.grey{
-    color:@fontGrey;
+  height: 100%;
+  font-size:12px;
 }
 .justify-center{
-    -webkit-justify-content:center;
-    justify-content:center;
+  -webkit-justify-content:center;
+  justify-content:center;
 }
 .justify-between{
-    -webkit-justify-content:space-between;
-    justify-content:space-between;
+  -webkit-justify-content:space-between;
+  justify-content:space-between;
 }
 .justify-around{
-    -webkit-justify-content:space-around;
-    justify-content:space-around
+  -webkit-justify-content:space-around;
+  justify-content:space-around
 }
 .flex-start{
-    -webkit-justify-content:flex-start;
-    justify-content:flex-start;
+  -webkit-justify-content:flex-start;
+  justify-content:flex-start;
 }
 .flex-end{
-    -webkit-justify-content:flex-end;
-    justify-content:flex-end;
+  -webkit-justify-content:flex-end;
+  justify-content:flex-end;
 }
 .align-middle{
-    -webkit-align-items: center;
-    align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
-.align-end{
-    -webkit-align-items: flex-end;
-    align-items: flex-end;
-}
-.content-arround{
-    -webkit-align-content:align-content;
-    align-content:align-content;
-}
-.content-between{
-    align-content:space-between
-}
-.flex-wrap{
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-.text-justify{
-    text-align:justify;
-    text-justify:distribute-all-lines;/*ie6-8*/
-    text-align-last:justify;/* ie9*/
-    -moz-text-align-last:justify;/*ff*/
-    -webkit-text-align-last:justify;/*chrome 20+*/
-}
-.fl{
-    float:left;
-}
-.fr{
-    float:right;
-}
-.clearfix{
-    zoom:1;
-}
-.clearfix:after{
-    clear:both;
-    content:'';
-    display:block;
-    width:0;
-    height:0;
-    visibility:hidden;
-}
-.border-box{
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.trans-unset{
-    transition: unset;
-    transform: unset;
-}
-[v-cloak] {
-    display: none;
-}
-.mg-t15{
-    margin-top:15px;
-}
-.mg-t10{
-    margin-top:10px;
-}
-.pad-15{
-    padding:15px;
-}
-.com-div{
-    .mg-t15;
-    .pad-15;
-}
-.top-0{
-    top:0;
-}
-.border-bottom-e5{
-    border-bottom:1px solid @bordere5;
-}
-.full-height{
-    height:100%;
-}
-.full-width{
-    width:100%;
-}
-.over-hide{
-    overflow:hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
 #app{
-    font-size:12px;
-}
-
-
-//通知
-.toast{
-    .trans-unset;
-    width:70%;
-    margin-left:-35%;
-    background: transparent;
-    padding:0;
-    .van-toast__text{
-        background-color: rgba(50,50,51,.88);
-        padding:10px 20px;
-        border-radius: 5px;
-    }
-}
-.toast-loading{
-  &.van-toast{
-    width:90px;
-    min-height: 90px;
-    padding:10px;
-    margin-left:-55px;
-    margin-top:-55px;
-    line-height: 1.2;
-    .trans-unset;
-  }
+  font-size:12px;
 }
 
 /**
@@ -233,19 +99,19 @@ body{
  * 需要记住位置需要手动处理
  */
 .xms-flex-wrap{
-      display: flex;
-      height:100%;
-      width:100%;
-      flex-wrap: nowrap;
-      flex-direction: column;
-      .xms-flex-headerOrBottom{
-        flex-shrink:0;
-      }
-      .xms-flex-middle{
-         flex:auto;
-         overflow:auto;
-         flex-shrink:1;
-         -webkit-overflow-scrolling:touch;
-          overflow-scrolling: touch;
-      }
+  display: flex;
+  height:100%;
+  width:100%;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  .xms-flex-headerOrBottom{
+    flex-shrink:0;
+  }
+  .xms-flex-middle{
+    flex:auto;
+    overflow:auto;
+    flex-shrink:1;
+    -webkit-overflow-scrolling:touch;
+    overflow-scrolling: touch;
+  }
 }

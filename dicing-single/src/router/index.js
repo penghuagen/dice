@@ -8,7 +8,7 @@ export default new Router({
   routes: [
     {
       path: '/index',
-      name: 'BoCake',
+      name: 'Dicing',
       component: () => import('@/views/Index'),
       meta: {
         title: '博饼小游戏'

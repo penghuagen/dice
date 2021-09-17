@@ -51,8 +51,7 @@ export default {
   methods: {
     deskGrades () {
       this.$http.post(this.url.deskGrades, {
-        deskNo: this.deskNo,
-        apiHostKey: 'dicing_url'
+        deskNo: this.deskNo
       }).then(({data}) => {
         this.deskAwards = data.deskAwards.reverse()
         this.deskUsers = data.deskUsers

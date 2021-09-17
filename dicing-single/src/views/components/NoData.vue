@@ -6,10 +6,9 @@
 
 <script>
 export default {
-  name: 'noMore',
+  name: 'NoData',
   data () {
-    return {
-    }
+    return {}
   },
   props: {
     msg: { // 提示文字

@@ -2,7 +2,7 @@
  * 博饼socket
  */
 import { Toast } from 'vant'
-let boCakeWebsocket = {
+let websocket = {
   cache: {
     wsUri: null,
     webSock: null,
@@ -98,13 +98,12 @@ let boCakeWebsocket = {
   },
 
   destroyedSocket () {
-    let _this = this
-    _this.config.reStatus = 0
-    if (_this.cache.webSock) {
-      _this.cache.webSock.close()
+    this.config.reStatus = 0
+    if (this.cache.webSock) {
+      this.cache.webSock.close()
     }
   }
 
 }
 
-export default boCakeWebsocket
+export default websocket
