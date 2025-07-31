@@ -1,7 +1,7 @@
 server:
   port: 8080
   servlet:
-    context-path: /
+    context-path: /dicing
     encoding:
       enabled: true
       charset: UTF-8
@@ -31,9 +31,9 @@ spring:
     date-format: yyyyMMddHHmmssSSS
     time-zone: GMT+8
   datasource:
-    url: yourUrl
-    username: username
-    password: password
+    url: ***
+    username: ***
+    password: ***
     driver-class-name: com.mysql.jdbc.Driver
 #    hikari:
 #      minimum-idle: 20
@@ -43,7 +43,7 @@ spring:
 #      max-lifetime: 60
 
 dicing:
-  startTime: 2020-09-17 16:52:00
+  startTime: 2025-07-30 23:30:00
   druid:
     initialSize: 20
     minIdle: 20
