@@ -11,9 +11,9 @@
             <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
                 <level>debug</level>
             </filter>
-            <file>/Users/apple/data/log/dicing_log/dicing.log</file>
+            <file>/data/log/dicing_log/dicing.log</file>
             <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-                <FileNamePattern>/Users/apple/data/log/dicing_log/dicing_%d{yyyy-MM-dd}.%i.log
+                <FileNamePattern>/data/log/dicing_log/dicing_%d{yyyy-MM-dd}.%i.log
                 </FileNamePattern>
                 <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                     <maxFileSize>10MB</maxFileSize>
@@ -43,9 +43,9 @@
             <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
                 <level>debug</level>
             </filter>
-            <file>/Users/apple/data/log/dicing_log/dicing.log</file>
+            <file>/data/log/dicing_log/dicing.log</file>
             <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-                <FileNamePattern>/Users/apple/data/log/dicing_log/dicing_%d{yyyy-MM-dd}.%i.log
+                <FileNamePattern>/data/log/dicing_log/dicing_%d{yyyy-MM-dd}.%i.log
                 </FileNamePattern>
                 <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                     <maxFileSize>10MB</maxFileSize>

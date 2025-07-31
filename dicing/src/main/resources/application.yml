@@ -22,9 +22,9 @@ spring:
     date-format: yyyyMMddHHmmssSSS
     time-zone: GMT+8
   datasource:
-    url: yourUrl
-    username: username
-    password: password
+    url: jdbc:mysql://47.114.141.192:3306/dicing?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: xms_xm2009
     driver-class-name: com.mysql.jdbc.Driver
 #    hikari:
 #      maximum-pool-size: 10
@@ -33,7 +33,7 @@ spring:
 #      minimum-idle: 3
 
 dicing:
-  startTime: 2021-09-15 16:40:00
+  startTime: 2024-09-15 16:40:00
   druid:
     initialSize: 3
     minIdle: 3
